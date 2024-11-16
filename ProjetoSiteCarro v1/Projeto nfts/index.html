@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Carros</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <img src="assets/img/logo.png" alt="Logo do Site">
+        <img src="assets/img/images (8).jpeg" alt="logotipo">
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#nft">NFT</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const nav = document.querySelector('nav ul');
+    
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
+    
+    
+    <!-- https://www.alainclass.com/cars/ -->
+    <section class="container">
+        <div class="list">
+            <div class="item active itemAnime">
+                <div class="car-img">
+                    <img src="assets/img/aurea.png" alt="carro 1">
+                </div>
+                <div class="content">
+                    <p class="car-information">Único Dono</p>
+                    <h2>Sagrado</h2>
+                    <p class="description">Arte desenvolvida por um monge que fez o maximo possivel para parecer com um sonho que ele teve nas montanhas do siricador.</p>
+                    <a href="sagrado.html">
+                    <button class=" button1">Saiba Mais</button>
+                    </a>
+                    <!-- information no btn sem -->
+                </div>
+            </div>
+            
+            <!-- outros 2 itens so depois do css pra nao ficar ruim os testes... -->
+            <div class="item">
+                <div class="car-img">
+                    <img src="assets/img/cinzas.png" alt="carro 1">
+                    <!-- <div class="carModelContainer" style="width: 100%; height: 100%;"></div> -->
+                </div>
+                <div class="content">
+                    <p class="car-information">unico Dono</p>
+                    <h2>alem dos olhos</h2>
+                    <p class="description">Arte feita po IA que vai alem dos sentidos da visão muitos espectadores após olhar a obra conseguiram sentir o cheiro e o gosto da queimada.</p>
+                    <a href="olhos.html">
+                    <button class=" button1">Saiba Mais</button>
+                </a>
+                </div>
+            </div>
+
+            <!-- <div class="item">
+                <div class="car-img">
+                    <img src="assets/img/gtr-removebg-preview.png" alt="carro 1">
+                    </div>
+                <div class="content">
+                    <p class="car-information">Ferrari 488 Spider</p>
+                    <h2>Ferrari</h2>
+                    <p class="description">A Ferrari 488 Spider é a perfeita combinação de desempenho extremo e design sofisticado. Equipado com um motor V8 biturbo de 3,9 litros, entrega uma potência de 670 cv, acelerando de 0 a 100 km/h em apenas 3 segundos.</p>
+                    <button class="information">Saiba Mais</button>
+                </div>
+            </div> -->
+
+            <div class="item">
+                <div class="car-img">
+                    <img src="assets/img/felino.png" alt="carro 1">
+                    <!-- <div class="carModelContainer" style="width: 100%; height: 100%;"></div> -->
+                </div>
+                <div class="content">
+                    <p class="car-information">unico Dono </p>
+                    <h2>A cor cria vida</h2>
+                    <p class="description">Uma arte de um felino colorida aparente que a as cores  se transformaram  nele</p>
+                    <a href="lifecolor.html">
+                    <button class=" button1">Saiba Mais</button>
+                </a>
+                </div>
+            </div>
+        </div>
+        <div class="arrows">
+            <button id="prev" class="button">←</button>
+            <button id="next" class="button">→</button>
+            <!-- <button id="next"><img src="assets/img/arrow.png" alt="setta 2"></button> -->
+        </div>
+        <div class="indicators">
+            <div class="number">01</div>
+            <ul>
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </section>
+    <section class="gallery" id="gallery">
+        <h2>Galeria de Imagens</h2>
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="assets/img/aurea.png" alt="Imagem 1">
+            </div>
+            <div class="gallery-item">
+                <img src="assets/img/cinzas.png" alt="Imagem 2">
+            </div>
+            <div class="gallery-item">
+                <img src="assets/img/felino.png" alt="Imagem 3">
+            </div>
+        </div>
+    </section>
+    <div class="fullscreen-overlay" id="fullscreenOverlay">
+        <img id="fullscreenImage" src="" alt="Imagem Ampliada">
+        <span class="close-overlay" id="closeOverlay">&times;</span>
+    </div>
+    <script>
+        const galleryItems = document.querySelectorAll('.gallery-item img');
+        const fullscreenOverlay = document.getElementById('fullscreenOverlay');
+        const fullscreenImage = document.getElementById('fullscreenImage');
+        const closeOverlay = document.getElementById('closeOverlay');
+    
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                fullscreenImage.src = item.src;
+                fullscreenOverlay.style.display = 'flex';
+            });
+        });
+    
+        closeOverlay.addEventListener('click', () => {
+            fullscreenOverlay.style.display = 'none';
+        });
+    
+        fullscreenOverlay.addEventListener('click', (e) => {
+            if (e.target !== fullscreenImage) {
+                fullscreenOverlay.style.display = 'none';
+            }
+        });
+    </script>
+    
+    
+    <section class="contact" id="contact">
+        <div class="contact-form-container">
+            <form id="form" action="seu-script-de-envio" method="POST">
+                <h1>Por favor, nos contate.</h1>
+
+                <div class="form-group">
+                    <label for="name">Nome</label>
+                    <input type="text" name="name" id="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Mensagem</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" id="send">Enviar</button>
+                    <button type="reset" id="reset">Resetar</button>
+                </div>
+            </form>
+        </div>
+        <div id="successMessage" class="success-message">
+            <h2>Mensagem enviada com sucesso!</h2>
+            <p>Recebemos sua mensagem! Obrigado por entrar em contato conosco.</p>
+        </div>
+    </section>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function () {
+                emailjs.init("3zd9g9IpiG09yrBCx");
+            })();
+        </script>
+        <script>
+            document.getElementById('form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                emailjs.sendForm('service_r5n5yjg', 'template_sod4mal', this)
+                    .then(function () {
+                        alert('Email enviado com sucesso!');
+                    }, function (error) {
+                        alert('Erro ao enviar o email: ' + JSON.stringify(error));
+                    });
+            });
+        </script>
+    
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
